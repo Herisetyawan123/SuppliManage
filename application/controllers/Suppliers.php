@@ -14,6 +14,6 @@ class Suppliers extends CI_Controller {
     
     public function index()
     {
-        $this->load->view('features/dashboard/index');
+        $this->load->view('features/supplier/index');
     }
 }

@@ -1,22 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Product extends CI_Model
+class Stock extends CI_Model
 {
-    private $_table = "product";
+    private $_table = "stock";
     public $id;
-    public $code_product;
-    public $name;
-    public $unit;
+    public $product_code;
     public $qty;
 
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
-    }
-
-    public function getById($id)
-    {
-        return $this->db->get_where($this->_table, ["id" => $id])->row();
     }
 
     public function getByProductCode($product_code)

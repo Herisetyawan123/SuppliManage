@@ -12,6 +12,11 @@
     <link href="/assets/vendor/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
     <link href="/assets/vendor/chartist/css/chartist.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- Add Bootstrap CSS -->
+    <link href="/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Datatable -->
+    <link href="/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 
 </head>
 

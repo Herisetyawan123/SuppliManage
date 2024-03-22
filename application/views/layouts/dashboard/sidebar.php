@@ -17,7 +17,7 @@
                  <a href="/suppliers"><i class="icon icon-world-2"></i><span class="nav-text">Daftar Supplier</span></a>
              </li>
              <li>
-                 <a href="/customers"><i class="icon icon-plug"></i><span class="nav-text">Daftar Pembelian</span></a>
+                 <a href="/purchase"><i class="icon icon-plug"></i><span class="nav-text">Daftar Pembelian</span></a>
              </li>
          </ul>
      </div>
