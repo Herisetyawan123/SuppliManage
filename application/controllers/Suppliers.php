@@ -16,4 +16,14 @@ class Suppliers extends CI_Controller {
     {
         $this->load->view('features/supplier/index');
     }
+
+    public function add()
+    {
+        $this->load->view('features/supplier/add');
+    }
+
+    public function edit()
+    {
+        $this->load->view('features/supplier/edit');
+    }
 }

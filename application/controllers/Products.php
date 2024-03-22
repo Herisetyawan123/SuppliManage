@@ -16,4 +16,14 @@ class Products extends CI_Controller {
     {
         $this->load->view('features/product/index');
     }
+
+    public function add()
+    {
+        $this->load->view('features/product/add');
+    } 
+    
+    public function edit()
+    {
+        $this->load->view('features/product/edit');
+    } 
 }

@@ -10,7 +10,8 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Daftar Pembelian</h4>
-                        <h4 class="btn btn-primary">Tambah</h4>
+                        <a href="/suppliers/add" class="btn btn-primary">Tambah</a>
+
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -30,7 +31,7 @@
                                         <td>Edinburgh</td>
                                         <td>
                                             <a href="" class="badge badge-primary">Detail</a>
-                                            <a href="" class="badge badge-warning">Edit</a>
+                                            <a href="/suppliers/edit" class="badge badge-warning">Edit</a>
                                             <a href="" class="badge badge-danger">delete</a>
                                         </td>
                                     </tr>

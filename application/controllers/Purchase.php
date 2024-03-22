@@ -16,4 +16,9 @@ class Purchase extends CI_Controller {
     {
         $this->load->view('features/purchase/index');
     }
+
+    public function add()
+    {
+        $this->load->view('features/purchase/add');
+    }
 }
