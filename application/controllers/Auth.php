@@ -15,9 +15,9 @@ class Auth extends CI_Controller {
 		if($this->user_model->current_user()){
 			redirect('/dashboard');
 		}
-		$this->load->view('layouts/header');
+		$this->load->view('layouts/auth/header');
 		$this->load->view('auth/signin');
-		$this->load->view('layouts/footer');
+		$this->load->view('layouts/auth/footer');
 	}
 
 	public function signup()
@@ -25,9 +25,9 @@ class Auth extends CI_Controller {
 		if($this->user_model->current_user()){
 			redirect('/dashboard');
 		}
-		$this->load->view('layouts/header');
+		$this->load->view('layouts/auth/header');
 		$this->load->view('auth/signup');
-		$this->load->view('layouts/footer');
+		$this->load->view('layouts/auth/footer');
 	}
 
 	public function register()
