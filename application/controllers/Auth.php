@@ -16,7 +16,7 @@ class Auth extends CI_Controller {
 			redirect('/dashboard');
 		}
 		$this->load->view('layouts/auth/header');
-		$this->load->view('auth/signin');
+		$this->load->view('features/auth/signin');
 		$this->load->view('layouts/auth/footer');
 	}
 
@@ -26,7 +26,7 @@ class Auth extends CI_Controller {
 			redirect('/dashboard');
 		}
 		$this->load->view('layouts/auth/header');
-		$this->load->view('auth/signup');
+		$this->load->view('features/auth/signup');
 		$this->load->view('layouts/auth/footer');
 	}
 
