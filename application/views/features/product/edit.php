@@ -12,7 +12,8 @@
                         <h4 class="card-title">Tambah Barang</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/products/update" method="post">
+                            <input type="hidden" id="id" name="id" value="<?= $product->id ?>">
                             <div class="form-group">
                                 <label for="nameBarang">Kode Barang</label>
                                 <input type="text" class="form-control" style="background-color: whitesmoke;" id="product_code" name="product_code" value="<?= $product->product_code ?>" disabled>

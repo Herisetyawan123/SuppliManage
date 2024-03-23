@@ -34,6 +34,12 @@ class Products extends CI_Controller {
         ]);
     } 
 
+    public function update()
+    {
+        $this->product->update();
+        redirect('/products');
+    }
+
     public function store()
     {
         $this->product->insert();

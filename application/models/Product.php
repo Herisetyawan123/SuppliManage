@@ -52,11 +52,27 @@ class Product extends CI_Model
         $this->db->trans_complete();
     }
 
-    public function update($product_code, $qty)
+    public function update()
     {
-        $this->db->where('product_code', $product_code);
-        $this->db->update('qty', $qty);
-        return $this->db->affected_rows();
+        $this->db->trans_start();
+
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('product', [
+            'name' => $this->input->post('name'),
+            'unit' => $this->input->post('unit'),
+            'price' => $this->input->post('price'),
+        ]);
+        
+        $this->db->where('product_code', $this->input->post('product_code'));
+        $this->db->update('stock', [
+            'qty' => $this->input->post('qty'),
+        ]);
+
+        // Selesaikan transaksi database
+        $this->db->trans_complete();
+
+        // Kembalikan status transaksi
+        return $this->db->trans_status();
     }
 
     public function get_product_with_stock() {
