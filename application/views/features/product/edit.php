@@ -37,6 +37,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="jumlah">Jumlah</label>
+                                <input type="numer" class="form-control" id="jumlah" name="qty" value="<?= $product->qty ?>">
+                            </div>
                             <button type="submit" class="btn btn-primary">Tambah</button>
                         </form>
                     </div>

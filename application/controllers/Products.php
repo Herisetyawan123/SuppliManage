@@ -39,4 +39,10 @@ class Products extends CI_Controller {
         $this->product->insert();
         redirect('/products');
     }
+
+    public function delete($product_code)
+    {
+        $this->product->delete($product_code);
+        redirect('/products');
+    }
 }

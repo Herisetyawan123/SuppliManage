@@ -36,7 +36,7 @@
                                         <td><?= $product->price ?></td>
                                         <td>
                                             <a href="/products/edit/<?= $product->id ?>" class="badge badge-warning">Edit</a>
-                                            <a href="" class="badge badge-danger">delete</a>
+                                            <a href="/products/delete/<?= $product->product_code ?>" class="badge badge-danger">delete</a>
                                         </td>
                                     </tr>
                                     <?php endforeach ?>
