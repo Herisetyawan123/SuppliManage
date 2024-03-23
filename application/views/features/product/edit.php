@@ -15,15 +15,15 @@
                         <form>
                             <div class="form-group">
                                 <label for="nameBarang">Kode Barang</label>
-                                <input type="text" class="form-control" id="nameBarang" name="product_code" required>
+                                <input type="text" class="form-control" style="background-color: whitesmoke;" id="product_code" name="product_code" value="<?= $product->product_code ?>" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="nameBarang">Nama Barang</label>
-                                <input type="text" class="form-control" id="nameBarang" name="name" required>
+                                <input type="text" class="form-control" id="nameBarang" name="name"  value="<?= $product->name ?>" required>
                             </div>
                             <div class="form-group">
                                 <label for="satuan">Satuan</label>
-                                <input type="password" class="form-control" id="satuan" name="unit">
+                                <input type="text" class="form-control" id="satuan" name="unit"  value="<?= $product->unit ?>">
                             </div>
                             <div class="form-group">
                                 <label for="price">Harga</label>
@@ -31,7 +31,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Rp.</span>
                                     </div>
-                                    <input type="text" class="form-control" name="price">
+                                    <input type="text" class="form-control" name="price"  value="<?= $product->price ?>">
                                     <div class="input-group-append">
                                         <span class="input-group-text">.00</span>
                                     </div>

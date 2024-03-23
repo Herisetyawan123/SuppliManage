@@ -6,6 +6,7 @@ class Products extends CI_Controller {
     {
         parent::__construct();
         $this->load->model("user_model");
+        $this->load->model("product");
         $this->load->library('form_validation');
         if(!$this->user_model->current_user()){
 			redirect('/auth');
@@ -14,7 +15,10 @@ class Products extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('features/product/index');
+        $products = $this->product->get_product_with_stock();
+        $this->load->view('features/product/index', [
+            'products' => $products,
+        ]);
     }
 
     public function add()
@@ -22,8 +26,17 @@ class Products extends CI_Controller {
         $this->load->view('features/product/add');
     } 
     
-    public function edit()
+    public function edit($id)
     {
-        $this->load->view('features/product/edit');
+        $product = $this->product->getById($id);
+        $this->load->view('features/product/edit', [
+            'product' => $product,
+        ]);
     } 
+
+    public function store()
+    {
+        $this->product->insert();
+        redirect('/products');
+    }
 }

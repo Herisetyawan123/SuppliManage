@@ -12,14 +12,14 @@
                         <h4 class="card-title">Tambah Barang</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/products/store" method="post">
                             <div class="form-group">
                                 <label for="nameBarang">Nama Barang</label>
                                 <input type="text" class="form-control" id="nameBarang" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="satuan">Satuan</label>
-                                <input type="password" class="form-control" id="satuan" name="unit">
+                                <input type="text" class="form-control" id="satuan" name="unit">
                             </div>
                             <div class="form-group">
                                 <label for="price">Harga</label>
@@ -32,6 +32,10 @@
                                         <span class="input-group-text">.00</span>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah">Jumlah</label>
+                                <input type="numer" class="form-control" id="jumlah" name="qty">
                             </div>
                             <button type="submit" class="btn btn-primary">Tambah</button>
                         </form>

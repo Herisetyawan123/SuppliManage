@@ -26,17 +26,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $no = 1; ?>
+                                    <?php foreach($products as $product): ?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $product->product_code ?></td>
+                                        <td><?= $product->name ?></td>
+                                        <td><?= $product->unit ?></td>
+                                        <td><?= $product->price ?></td>
                                         <td>
-                                            <a href="/products/edit" class="badge badge-warning">Edit</a>
+                                            <a href="/products/edit/<?= $product->id ?>" class="badge badge-warning">Edit</a>
                                             <a href="" class="badge badge-danger">delete</a>
                                         </td>
                                     </tr>
+                                    <?php endforeach ?>
                                 </tbody>
                             </table>
                         </div>
