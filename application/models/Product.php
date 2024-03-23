@@ -4,7 +4,7 @@ class Product extends CI_Model
 {
     private $_table = "product";
     public $id;
-    public $code_product;
+    public $product_code;
     public $name;
     public $unit;
     public $qty;

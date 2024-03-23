@@ -12,7 +12,7 @@
                         <h4 class="card-title">Tambah Supplier</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form action="/suppliers/store" method="post">
                             <div class="form-group">
                                 <label for="nameBarang">Nama Supplier</label>
                                 <input type="text" class="form-control" id="nameBarang" name="name" required>

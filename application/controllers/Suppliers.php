@@ -6,6 +6,7 @@ class Suppliers extends CI_Controller {
     {
         parent::__construct();
         $this->load->model("user_model");
+        $this->load->model("supplier");
         $this->load->library('form_validation');
         if(!$this->user_model->current_user()){
 			redirect('/auth');
@@ -14,7 +15,10 @@ class Suppliers extends CI_Controller {
     
     public function index()
     {
-        $this->load->view('features/supplier/index');
+        $suppliers = $this->supplier->getAll();
+        $this->load->view('features/supplier/index', [
+            'suppliers' => $suppliers,
+        ]);
     }
 
     public function add()
@@ -22,8 +26,27 @@ class Suppliers extends CI_Controller {
         $this->load->view('features/supplier/add');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        $this->load->view('features/supplier/edit');
+        $supplier = $this->supplier->getById($id);
+        $this->load->view('features/supplier/edit', ['supplier' => $supplier]);
+    }
+
+    public function store()
+    {
+        $this->supplier->save();
+        redirect('/suppliers');
+    }
+
+    public function update()
+    {
+        $this->supplier->update();
+        redirect('/suppliers');
+    }
+
+    public function delete($id)
+    {
+        $this->supplier->delete($id);
+        redirect('/suppliers');
     }
 }
